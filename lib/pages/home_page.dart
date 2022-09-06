@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/music_control_row.dart';
+import '../widgets/text_column.dart';
+import '../widgets/top_row.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -12,35 +16,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 18.0, left: 18, right: 18),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.arrow_drop_down,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                ),
-                const Text(
-                  'Playing from Playlist',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w600),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.menu_sharp,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const TopRow(),
           const SizedBox(
             height: 70,
           ),
@@ -58,28 +34,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 190.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'The KVS Logo',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 20),
-                ),
-                Text(
-                  'KVS',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 20),
-                ),
-              ],
-            ),
-          ),
+          const TextColumn(),
           Column(
             children: [
               Padding(
@@ -112,56 +67,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite_outline,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.skip_previous,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                  CircleAvatar(
-                    minRadius: 45,
-                    backgroundColor: Colors.white,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.pause,
-                        color: Colors.black45,
-                      ),
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.skip_next,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.do_not_disturb,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                ]),
-          ),
+          const MusicControlsRow(),
         ],
       ),
     );
