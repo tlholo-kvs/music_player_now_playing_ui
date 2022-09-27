@@ -17,10 +17,10 @@ class MusicHomePage extends StatelessWidget {
               children: [
                 const Text(
                   'Good afternoon',
-                  style: TextStyle(fontSize: 30, color: Colors.white),
+                  style: TextStyle(fontSize: 25, color: Colors.white),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 60,
                 ),
                 IconButton(
                   onPressed: () {},
@@ -46,9 +46,23 @@ class MusicHomePage extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            children: const [],
+          const SizedBox(
+            height: 15,
           ),
+          Row(
+            children: [
+              Container(),
+              Container(),
+            ],
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Row(),
+          Row(),
+          Row(),
+          //Your shows Row
+          Row(),
         ],
       ),
       bottomNavigationBar: const BottomBar(),

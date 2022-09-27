@@ -12,6 +12,7 @@ class BottomBar extends StatelessWidget {
         canvasColor: Colors.black,
       ),
       child: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
         selectedLabelStyle: const TextStyle(color: Colors.green),
         unselectedLabelStyle: const TextStyle(color: Colors.white),
         showUnselectedLabels: true,
